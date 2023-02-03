@@ -1,0 +1,10 @@
+version: "3.2"
+services:
+  postgres-db:
+    container_name: order-processing-db
+    command: postgres -c 'max_connections=200'
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: "Pa55word!"
